@@ -1,0 +1,175 @@
+ <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <title>TSM</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    /* Head style */
+    .header {
+        background: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/fabee126673247.56358c4124975.png) no-repeat;
+        padding: 100px;
+        height: 350px;
+        width: 100%;
+        background-size: 100% 100%;
+        text-align: center;
+    }
+
+    /* Style top navigation bar */
+    .topnav {
+        overflow: hidden;
+        background-color: #333;
+    }
+
+    /* Style the  links */
+    .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 11%;
+        text-decoration: none;
+    }
+        
+    /* Change color on hover */
+    .topnav a:hover {
+        background-color: #ddd;
+        color: black;}
+       
+        @import "compass/css3";
+
+    @import url(https://fonts.googleapis.com/css?family=Merriweather);
+    $red: #e74c3c;
+
+    *, 
+    *:before, 
+    *:after {
+
+        @include box-sizing(border-box); 
+    }
+
+    html, body {
+
+      font-family: 'Merriweather', sans-serif;
+      padding: 1em;
+    }
+
+    h1 {
+       text-align: center;
+       color: #a8a8a8;
+       @include text-shadow(1px 1px 0 rgba(white, 1));
+    }
+
+    form {
+       max-width: 600px;
+       text-align: center;
+       margin: 20px auto;
+
+      input, textarea {
+         border:0; outline:0;
+         padding: 1em;
+         @include border-radius(8px);
+         display: block;
+         width: 100%;
+         margin-top: 1em;
+         font-family: 'Merriweather', sans-serif;
+         @include box-shadow(0 1px 1px rgba(black, 0.1));
+         resize: none;
+
+        &:focus {
+           @include box-shadow(0 0px 2px rgba($red, 1)!important);
+        }
+      }
+
+      #input-submit {
+         color: white; 
+         background: $red;
+         cursor: pointer;
+
+        &:hover {
+           @include box-shadow(0 1px 1px 1px rgba(#aaa, 0.6)); 
+        }
+      }
+
+      textarea {
+          height: 126px;
+      }
+    }
+
+
+    .half {
+      float: left;
+      width: 48%;
+      margin-bottom: 1em;
+    }
+
+    .right { width: 50%; }
+
+    .left {
+         margin-right: 2%; 
+    }
+
+
+    @media (max-width: 480px) {
+      .half {
+         width: 100%; 
+         float: none;
+         margin-bottom: 0; 
+      }
+    }
+
+
+    /* Clearfix */
+    .cf:before,
+    .cf:after {
+        content: " "; /* 1 */
+        display: table; /* 2 */
+    }
+
+    .cf:after {
+        clear: both;
+    }   
+ 
+    </style>
+    </head>
+    <body background="http://www.nmgncp.com/data/out/163/4994072-gray-and-black-wallpaper.png">
+    <div class="header">
+      
+    </div>
+
+
+
+
+
+     <div class="topnav">
+      <a href="home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="team.html">Team</a>
+     <a href="Contact.html"> Contact</a>
+    </div>
+
+        
+        
+         <h1>Contact Us</h1>
+    <form class="cf">
+      <div class="half left cf">
+        <input type="text" id="input-name" placeholder="Name">
+        <input type="email" id="input-email" placeholder="Email address">
+        <input type="text" id="input-subject" placeholder="Subject">
+      </div>
+      <div class="half right cf">
+        <textarea name="message" type="text" id="input-message" placeholder="Message"></textarea>
+      </div>  
+      <input type="submit" value="Submit" id="input-submit">
+    </form>   
+
+        </body>
+        </html>
